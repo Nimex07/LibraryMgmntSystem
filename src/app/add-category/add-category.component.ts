@@ -22,7 +22,7 @@ export class AddCategoryComponent implements OnInit {
 
   createForm() {
     this.addCategoryForm = this.formBuilder.group({
-      category: ['', Validators.required] // wont accept empty
+      categoryName: ['', Validators.required] // wont accept empty values
     });
   }
 
@@ -36,4 +36,5 @@ export class AddCategoryComponent implements OnInit {
       data => console.log(data), error => console.log(error)
     );
   }
+
 }

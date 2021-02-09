@@ -1,1 +1,17 @@
-<p>view-category works!</p>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>#ID</th>
+            <th>Category</th>
+    </thead>
+    <tbody>
+        <tr
+            *ngFor="let category of categories | async">
+            <td>{{category.catId}}</td>
+            <td>{{category.category}}</td>
+            <td>                 
+                <button (click)="editCategory(category.catId)" >Edit</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
